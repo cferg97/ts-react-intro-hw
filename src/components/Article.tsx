@@ -2,8 +2,6 @@ import { Col, Card } from "react-bootstrap";
 import { Articles } from "../types";
 import { parseISO, format } from "date-fns";
 import { Link } from "react-router-dom";
-import { parse } from "path";
-import Accordion from 'react-bootstrap/Accordion'
 
 interface ArticleProps {
   article: Articles;

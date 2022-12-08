@@ -17,6 +17,7 @@ const FetchArticles = () => {
       if (response.ok) {
         let data = await response.json();
         setArticles(data);
+
       } else {
         console.log("Couldn't fetch article data");
       }
