@@ -2,10 +2,11 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { ArticalDetails } from "../types";
-import Article from "./Article";
+import { Container, Row, Col, Card } from "react-bootstrap";
+
 
 const Details = () => {
-  const [article, setArticle] = useState<ArticalDetails[]>([]);
+  const [article, setArticle] = useState<ArticalDetails>();
   const params = useParams();
 
   const fetchArticle = async () => {
@@ -25,16 +26,18 @@ const Details = () => {
   };
 
   useEffect(() => {
-    if (params.id) {
-      fetchArticle();
-    }
-  }, [params.id]);
+    fetchArticle();
+  }, []);
 
   return (
-    <>
-      <h1>hello</h1>
-      {console.log(article)}
-    </>
+        <Row className="justify-content-center">
+            <Col md={6} className="mt-4">
+                <Card className="text-center">
+                    <Card.Title>{article?.title}</Card.Title>
+                </Card>
+            </Col>
+        </Row>
+    
   );
 };
 

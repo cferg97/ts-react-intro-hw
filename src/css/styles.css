@@ -11,6 +11,7 @@ body{
 }
 
 #main-con{
+    min-height: 100vh;
     background: linear-gradient(to bottom, rgb(0, 6, 24), rgb(54, 57, 94));
 }
 
