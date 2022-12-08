@@ -17,7 +17,6 @@ const Article = ({ article }: ArticleProps) => {
           <Card.Subtitle className="text-muted">{article.newsSite}</Card.Subtitle>
           <hr />
           <Card.Text>
-            {article.summary}<br />
             Click <a href={article.url}>here</a> for article.
           </Card.Text>
         </Card.Body>

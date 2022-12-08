@@ -34,6 +34,11 @@ const Details = () => {
             <Col md={6} className="mt-4">
                 <Card className="text-center">
                     <Card.Title>{article?.title}</Card.Title>
+                    <Card.Subtitle>Article ID: {article?.id}</Card.Subtitle>
+                    <Card.Body><Card.Img src={article?.imageUrl} style={{height: "30rem"}}/>
+                    <Card.Text>{article?.summary}</Card.Text>
+                    </Card.Body>
+        
                 </Card>
             </Col>
         </Row>
